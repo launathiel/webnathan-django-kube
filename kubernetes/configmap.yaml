@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: django-config
+  namespace: default
+data:
+  DEBUG: "1"
+  SECRET_KEY: change_me
+  DJANGO_ALLOWED_HOSTS: 'localhost 127.0.0.1 [::1]'
+  SQL_ENGINE: django.db.backends.postgresql
+  SQL_PORT: "5432"
+  DATABASE: postgres
+  EMAIL_HOST_USER: launathiel69@gmail.com
+  EMAIL_HOST_PASSWORD: qjsjoooahzmeuojb  
