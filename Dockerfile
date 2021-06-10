@@ -34,4 +34,8 @@ COPY . .
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 
+# default command to execute 
+CMD exec python manage.py runserver 0.0.0.0:8000
+
+# expose the port
 EXPOSE 8000

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: django
-        image: launathiel/django-kubernetes-project:1.0
+        image: launathiel/webnathan-django-public:1.0
         resources:
           requests:
             memory: "64Mi"
@@ -37,7 +37,9 @@ spec:
             secretKeyRef:
               name: postgres-credentials
               key: password
-        - name: POSTGRES_HOST
+        - name: SQL_DATABASE
+          value: kubernetes_django
+        - name: SQL_HOST
           value: postgres-service
         - name: DEBUG
           valueFrom:
